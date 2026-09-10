@@ -1,0 +1,19 @@
+#!/usr/bin/env fish
+
+echo "turnoff-screen, for sway"
+echo "written on 2026-04-14"
+echo
+echo "screen will turn off in 5 seconds..."
+echo "Press the keyboard 3 times to recover."
+
+for i in (seq 5 -1 1)
+    echo -n "$i..."
+    sleep 1
+end
+echo
+
+swaymsg "output * dpms off" || exit 1
+
+read -n 3 -P ''
+
+swaymsg "output * dpms on" || exit 1

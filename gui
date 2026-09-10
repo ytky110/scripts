@@ -1,0 +1,25 @@
+#!/bin/sh
+
+[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+[ -d "$HOME/local/bin" ] && export PATH="$HOME/local/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+[ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
+
+# My original package managers
+[ -d "$HOME/.ytk/bin" ] && export PATH="$HOME/.ytk/bin:$PATH"
+[ -d "$HOME/.yackman/bin" ] && export PATH="$HOME/.yackman/bin:$PATH"
+[ -d "$HOME/.nyacksys/bin" ] && export PATH="$HOME/.nyacksys/bin:$PATH"
+[ -d "$HOME/.nycksys/local/bin" ] && export PATH="$HOME/.nycksys/local/bin:$PATH"
+[ -d "$HOME/.ypkg.d/local/bin" ] && export PATH="$HOME/.ypkg.d/local/bin:$PATH"
+
+export EDITOR=nvim
+export GRIM_DEFAULT_DIR=/home/yutaka/pictures/screenshots
+export WINEPREFIX=/home/yutaka/.wine/aqtk
+
+export GTK_USE_PORTAL=1
+export RUST_BACKTRACE=1
+
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+
+dbus-run-session sway
