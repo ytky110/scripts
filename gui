@@ -17,6 +17,7 @@ export GRIM_DEFAULT_DIR=/home/yutaka/pictures/screenshots
 export WINEPREFIX=/home/yutaka/.wine/aqtk
 
 export GTK_USE_PORTAL=1
+export GTK_THEME=Adwaita:dark
 export RUST_BACKTRACE=1
 
 export XDG_CURRENT_DESKTOP=sway

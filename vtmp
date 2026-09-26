@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set_filename() {
+    filename=`LC_ALL=C tr -dc 'a-zA-Z0-9' </dev/urandom | head -c 8`
+}
+
+while :
+do
+    set_filename
+
+    if [ ! -e "$HOME/tmp/$filename" ]
+    then
+        break
+    fi
+done
+
+nvim "$HOME/tmp/$filename"
