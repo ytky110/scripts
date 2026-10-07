@@ -6,6 +6,11 @@ echo
 echo "screen will turn off in 5 seconds..."
 echo "Press the keyboard 3 times to recover."
 
+function restore_screen --on-signal INT --on-signal TERM
+    swaymsg "output * dpms on" >/dev/null
+    exit 130
+end
+
 for i in (seq 5 -1 1)
     echo -n "$i..."
     sleep 1
