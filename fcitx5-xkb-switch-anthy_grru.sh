@@ -3,7 +3,7 @@
 #ON_LAYOUT="ch"
 #OFF_LAYOUT="ch"
 ON_LAYOUT="onishi-chfr"
-OFF_LAYOUT="yutaka,yutaka-gr"
+OFF_LAYOUT="yutaka,yutaka-gr,yutaka-ru"
 
 last=""
 
